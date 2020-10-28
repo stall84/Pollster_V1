@@ -30,7 +30,11 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+
+# We add polls.apps.PollsConfig to the first line to have our app 'register' our newly created Polls app.
+# This specifically pulls on the Class located in polls/apps.py
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
